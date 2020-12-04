@@ -1,9 +1,11 @@
 /* eslint-disable no-console */
 import redis from 'redis';
 
+import config from '../config';
+
 const client = redis.createClient({
-  port: process.env.REDIS_PORT,
-  host: process.env.REDIS_HOST,
+  port: config.REDIS_PORT,
+  host: config.REDIS_HOST,
 });
 
 client.on('connect', () => {
