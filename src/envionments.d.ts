@@ -7,6 +7,8 @@ declare global {
       ACCESS_TOKEN_SECRET: string;
       REFRESH_TOKEN_SECRET: string;
       BCRYPT_SALT_ROUNDS: string;
+      REDIS_PORT: string;
+      REDIS_HOST: string;
     }
   }
 }
