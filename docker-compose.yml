@@ -35,8 +35,9 @@ services:
             dockerfile: Dockerfile
         environment:
             docker: "true"
+        # assuming 5000 port in .env
         ports:
-            - 8080:3000
+            - 5000:5000
         volumes: 
             - .:/app
         env_file:
