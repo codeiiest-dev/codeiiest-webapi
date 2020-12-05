@@ -16,6 +16,8 @@ services:
             - 'redis_data:/bitnami/redis/data'
         expose:
             - "6379"
+        ports: 
+            - 6379:6379
     mongo:
         image: 'mongo'
         restart: always
@@ -28,6 +30,8 @@ services:
           - MONGO_INITDB_ROOT_PASSWORD=password
         expose:
           - "27017"
+        ports: 
+          - 27017:27017
 
     server:
         build:
@@ -38,8 +42,6 @@ services:
         # assuming 5000 port in .env
         ports:
             - 5000:5000
-        volumes: 
-            - .:/app
         env_file:
             - .env
         depends_on:

@@ -5,6 +5,8 @@ export default async (): Promise<any> => {
   const connection = await mongoose.connect(config.DB_URI!, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    user: 'admin2',
+    pass: 'password',
   });
   return connection.connection.db;
 };
