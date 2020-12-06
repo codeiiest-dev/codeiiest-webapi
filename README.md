@@ -31,10 +31,10 @@
 ```json
 json
 {
-    * "phone":     "string",
-    * "password":  "string",
-      "email":     "string",
-      "name":      "string",
+    "phone*":     "string",
+    "password*":  "string",
+    "email":     "string",
+    "name":      "string",
 }
 ```
 
@@ -50,7 +50,7 @@ json
 {
     "prettyMessage":    "string",
     "status":           "number",
-    "data"?: {
+    "data": {
             "accessToken":    "string",
             "userId":         "string",
             "refreshToken":   "string",
@@ -68,9 +68,9 @@ json
 
 ```json
 {
-    409:    "Already Registered",
-    201:    "User registered successfully",
-    501:    "Internal Server Error",
+  "409": "Already Registered",
+  "201": "User registered successfully",
+  "501": "Internal Server Error"
 }
 ```
 
@@ -93,8 +93,8 @@ json
 ```json
 json
 {
-    * "phone":     "string",
-    * "password":  "string",
+    "phone*":     "string",
+    "password*":  "string",
 }
 ```
 
@@ -110,7 +110,7 @@ json
 {
     "prettyMessage":    "string",
     "status":           "number",
-    "data"?: {
+    "data?": {
             "accessToken":    "string",
             "userId":         "string",
             "refreshToken":   "string",
@@ -128,9 +128,9 @@ json
 
 ```json
 {
-    200:    "User Authorised",
-    401:    "User not registered" | "User not Authorised",
-    501:    "Internal Server Error",
+  "200": "User Authorised",
+  "401": ["User not registered" , "User not Authorised"],
+  "501": "Internal Server Error"
 }
 ```
 
@@ -151,8 +151,8 @@ json
 <td>
 
 ```json
-    * "access-token":   "string",
-    * "user-id":        "string",
+    "access-token*":   "string",
+    "user-id*":        "string",
 ```
 
 </td>
@@ -165,7 +165,7 @@ json
 ```json
 json
 {
-    * "refreshToken":     "string",
+    "refreshToken*":     "string",
 }
 ```
 
@@ -181,7 +181,7 @@ json
 {
     "prettyMessage":    "string",
     "status":           "number",
-    "data"?: {
+    "data": {
             "accessToken":    "string",
             "userId":         "string",
             "refreshToken":   "string",
@@ -199,10 +199,10 @@ json
 
 ```json
 {
-    205:    "OK",
-    400:    "Invalid",
-    405:    "Refresh Token Expire" ,
-    501:    "Internal Server Error",
+  "205": "OK",
+  "400": "Invalid",
+  "405": "Refresh Token Expire",
+  "501": "Internal Server Error"
 }
 ```
 
@@ -224,8 +224,8 @@ json
 <td>
 
 ```json
-    * "access-token":   "string",
-    * "user-id":        "string",
+    "access-token*":   "string",
+    "user-id*":        "string",
 ```
 
 </td>
@@ -266,8 +266,8 @@ json
 
 ```json
 {
-    200:    "Logged Out",
-    501:    "Internal Server Error",
+  "200": "Logged Out",
+  "501": "Internal Server Error"
 }
 ```
 
