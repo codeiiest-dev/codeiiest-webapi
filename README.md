@@ -129,7 +129,7 @@ json
 ```json
 {
   "200": "User Authorised",
-  "401": ["User not registered" , "User not Authorised"],
+  "401": ["User not registered", "User not Authorised"],
   "501": "Internal Server Error"
 }
 ```
@@ -267,6 +267,152 @@ json
 ```json
 {
   "200": "Logged Out",
+  "501": "Internal Server Error"
+}
+```
+
+</td>
+</tr>
+<td>5.</td>
+<td>METHOD</td>
+<td>GET</td>
+</tr>
+<tr>
+<td></td>
+<td>ROUTE</td>
+<td>/user/get</td>
+</tr>
+<tr>
+<tr>
+<td></td>
+<td>REQ BODY</td>
+<td>
+
+```json
+json
+{
+    "phone*":   "string"
+}
+```
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td>RES BODY</td>
+<td>
+
+```json
+json
+{
+    "prettyMessage":    "string",
+    "status":           "number",
+    "success":          "boolean",
+    "phone*":           "string",
+    "data": {
+        "email":        "string",
+        "links": {
+                "github":       "string",
+                "linkedin":     "string",
+                "codeforces":   "string",
+                "codechef":     "string"
+            },
+        "name":         "string",
+        "phone":        "string",
+        "status":       "string",
+        "updatedAt":    "number",
+        "userId":       "string"
+    }
+}
+```
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td>STATUS CODES</td>
+<td>
+
+```json
+{
+  "200": "Found",
+  "404": "User Not Found",
+  "501": "Internal Server Error"
+}
+```
+
+</td>
+</tr>
+<td>4.</td>
+<td>METHOD</td>
+<td>POST</td>
+</tr>
+<tr>
+<td></td>
+<td>ROUTE</td>
+<td>/user/update</td>
+</tr>
+<tr>
+<td></td>
+<td>REQ HEADERS</td>
+<td>
+
+```json
+    "access-token*":   "string",
+    "user-id*":        "string",
+```
+
+</td>
+</tr>
+<tr>
+<tr>
+<td></td>
+<td>REQ BODY</td>
+<td>
+
+```json
+json
+{
+    "phone*":       "string", // Except phone, any key send will be updated
+    "email":        "string",
+    "links": {
+        "github":       "string",
+        "linkedin":     "string",
+        "codeforces":   "string",
+        "codechef":     "string"
+        },
+    "name":         "string",
+    "status":       "string",
+}
+```
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td>RES BODY</td>
+<td>
+
+```json
+json
+{
+    "prettyMessage":    "string",
+    "status":           "number",
+    "success":          "boolean",
+}
+```
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td>STATUS CODES</td>
+<td>
+
+```json
+{
+  "200": "Updated",
+  "404": "User Not Found",
   "501": "Internal Server Error"
 }
 ```
