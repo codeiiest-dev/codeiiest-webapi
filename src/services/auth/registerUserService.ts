@@ -46,6 +46,12 @@ const registerUserService = async (
       userId,
       status,
       updatedAt,
+      links: {
+        github: '',
+        linkedin: '',
+        codeforces: '',
+        codechef: '',
+      },
     });
 
     // Saving the user record in db

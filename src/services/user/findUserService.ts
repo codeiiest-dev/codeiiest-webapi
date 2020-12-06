@@ -8,6 +8,12 @@ interface userModelType {
   password: string;
   status: string;
   updatedAt: number;
+  links: {
+    github: string;
+    linkedin: string;
+    codeforces: string;
+    codechef: string;
+  };
 }
 
 interface findUserPromiseType {

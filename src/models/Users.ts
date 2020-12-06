@@ -11,6 +11,12 @@ const UserSchema = new Schema({
   password: String,
   status: String, // "VERIFIED", "PENDING"
   updatedAt: Number,
+  links: {
+    github: String,
+    linkedin: String,
+    codeforces: String,
+    codechef: String,
+  },
 });
 
 export default model('user', UserSchema);
