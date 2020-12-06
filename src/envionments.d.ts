@@ -9,6 +9,8 @@ declare global {
       BCRYPT_SALT_ROUNDS: string;
       REDIS_PORT: string;
       REDIS_HOST: string;
+      MONGO_USER: string;
+      MONGO_PASSWORD: string;
     }
   }
 }
