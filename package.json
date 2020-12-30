@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.ts",
+    "start": "yarn run build && node build/index.js",
+    "dev": "nodemon src/index.ts",
     "lint": "eslint ./src --ext .ts",
-    "lint:fix": "eslint ./src --ext .ts --fix"
+    "lint:fix": "eslint ./src --ext .ts --fix",
+    "build":"tsc -p tsconfig.json"
   },
   "license": "ISC",
   "dependencies": {
